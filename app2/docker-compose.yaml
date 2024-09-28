@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nodejs-app:
+    build: .
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - erdis
+
+networks:
+  erdis:
+    external: true
